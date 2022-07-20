@@ -16,7 +16,7 @@ jobs:
             sudo npm install -g @rockset/cli
       - name: Authorize access
         run: |
-          rockset auth:add me ${{ secrets.RS2_TOKEN }}
+          rockset auth:add me ${{ secrets.RS2_TOKEN }} ${{ secrets.RS2_SERVER }}
       - name: Add docs
         run: |
           cd db/scripts
